@@ -1,0 +1,35 @@
+title: (주)창경
+description: 회사 공식 홈페이지
+url: https://cgbis1.github.io
+baseurl: ""
+theme: null
+remote_theme: mmistakes/minimal-mistakes
+plugins:
+  - jekyll-remote-theme
+collections:
+  notices:
+    output: true
+    permalink: /pr/notices/:name/
+  jobs:
+    output: true
+    permalink: /careers/jobs/:name/
+defaults:
+  - scope:
+      path: ""
+      type: notices
+    values:
+      layout: single
+  - scope:
+      path: ""
+      type: jobs
+    values:
+      layout: single
+nav_main:
+  - title: 회사소개
+    url: /company/overview/
+  - title: 사업분야
+    url: /business/
+  - title: 홍보센터
+    url: /pr/notices/
+  - title: 인재채용
+    url: /careers/jobs/

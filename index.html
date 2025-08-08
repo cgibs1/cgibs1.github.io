@@ -1,170 +1,103 @@
-<!doctype html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>회사 홈페이지 | 메인</title>
-  <meta name="description" content="회사 공식 홈페이지" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
+---
+layout: none
+---
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{{ site.title }} | 메인</title>
+<meta name="description" content="{{ site.description | escape }}"/>
+<link rel="icon" href="data:;base64,iVBORw0KGgo="/>
+<link rel="stylesheet" href="/assets/css/style.css"/>
+</head><body>
 <header class="site-header">
   <div class="container">
-    <div class="brand">Company Name</div>
+    <div class="brand"><a href="/" style="text-decoration:none;color:inherit">{{ site.title }}</a></div>
     <nav class="main-nav">
-      <a href="#main">메인</a>
-      <a href="#intro1">회사소개</a>
-      <a href="#intro2">사업분야</a>
-      <a href="#intro3">홍보센터</a>
-      <a href="#intro4">인재채용</a>
+      <a href="/company/overview/">회사소개</a>
+      <a href="/business/">사업분야</a>
+      <a href="/pr/notices/">홍보센터</a>
+      <a href="/careers/jobs/">인재채용</a>
+      <a href="/company/location/">오시는 길</a>
     </nav>
   </div>
 </header>
-
-<!-- Left sticky label -->
-<div class="left-label">
-  <span id="section-label">MAIN</span>
-</div>
-
+<div class="left-label"><span id="section-label">MAIN</span></div>
 <main class="snap-wrapper">
-  <!-- Fullscreen sections with CSS scroll-snap -->
-  <section id="main" class="snap-section hero" data-label="MAIN" style="background-image:url('assets/img/hero.jpg')">
-    <div class="hero-content">
+  <section id="main" class="snap-section hero" data-label="MAIN">
+    <div class="content container">
       <h1>더 나은 공간, 더 나은 내일</h1>
       <p>신뢰와 기술로 미래를 짓습니다.</p>
-      <a href="#intro1" class="btn">회사소개 보기</a>
+      <a class="btn" href="/company/overview/">회사소개 보기</a>
     </div>
   </section>
-
-  <section id="intro1" class="snap-section" data-label="ABOUT">
+  <section id="about" class="snap-section" data-label="ABOUT">
     <div class="container narrow">
-      <h2>회사소개</h2>
+      <h2>회사소개(요약)</h2>
       <div class="grid two">
-        <div>
-          <h3>CEO 인사말</h3>
-          <p>고객과 사회에 신뢰받는 기업이 되겠습니다. (샘플 텍스트)</p>
-        </div>
-        <div>
-          <h3>기업개요</h3>
-          <p>무엇을 하는 회사인지 한눈에 이해되도록 간결하게 설명합니다.</p>
-        </div>
-        <div>
-          <h3>주요연혁</h3>
-          <ul class="timeline">
-            <li><span>2025</span> 본사 이전 및 신규 사업 진출</li>
-            <li><span>2023</span> ISO 인증 취득</li>
-            <li><span>2021</span> 법인 설립</li>
-          </ul>
-        </div>
-        <div>
-          <h3>조직도</h3>
-          <p>조직 구조와 각 부서 연락처 표기 (샘플)</p>
-        </div>
+        <div class="card"><h3>CEO 인사</h3><p>기업 메시지 요약. 자세히 보기 → <a href="/company/ceo/">CEO 인사말</a></p></div>
+        <div class="card"><h3>연혁</h3><p>하이라이트. 자세히 보기 → <a href="/company/history/">주요연혁</a></p></div>
       </div>
     </div>
   </section>
-
-  <section id="intro2" class="snap-section alt" data-label="BUSINESS">
+  <section id="business" class="snap-section" data-label="BUSINESS">
     <div class="container narrow">
-      <h2>사업분야</h2>
-      <p>프로젝트 카테고리를 4~5개로 구분하고 대표 사례를 카드로 보여줍니다.</p>
+      <h2>사업분야(요약)</h2>
       <div class="grid three">
-        <article class="card"><h3>인프라</h3><p>도로, 철도, 터널</p></article>
-        <article class="card"><h3>건축</h3><p>공공/민간 빌딩, 플랜트</p></article>
-        <article class="card"><h3>스마트/자동제어</h3><p>BAS, IoT, 에너지관리</p></article>
+        <article class="card"><h3>토목</h3><p>도로/철도/터널</p></article>
+        <article class="card"><h3>건축</h3><p>공공/민간</p></article>
+        <article class="card"><h3>스마트/자동제어</h3><p>BAS/IoT/EMS</p></article>
       </div>
+      <p><a class="btn" href="/business/">사업분야 전체 보기</a></p>
     </div>
   </section>
-
-  <section id="intro3" class="snap-section" data-label="PR CENTER">
+  <section id="pr" class="snap-section" data-label="PR CENTER">
     <div class="container narrow">
-      <h2>홍보센터</h2>
+      <h2>홍보센터(요약)</h2>
       <div class="grid two">
-        <div>
+        <div class="card">
           <h3>공지사항</h3>
           <ul class="list">
-            <li><a href="#">[공지] 홈페이지 오픈</a><time>2025-08-08</time></li>
-            <li><a href="#">[알림] 회사 소개서 업데이트</a><time>2025-07-10</time></li>
+          {% assign items = site.notices | sort: 'date' | reverse | slice: 0, 5 %}
+          {% for it in items %}
+            <li><a href="{{ it.url | relative_url }}">{{ it.title }}</a><time>{{ it.date | date: "%Y-%m-%d" }}</time></li>
+          {% endfor %}
           </ul>
         </div>
-        <div>
+        <div class="card">
           <h3>홍보영상</h3>
           <div class="video-wrap">
-            <!-- 메인 영상: YouTube 예시 (원하면 바꾸기) -->
             <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?rel=0&autoplay=0&mute=1&controls=1"
-              title="홍보영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+              title="홍보영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
       </div>
-
-      <div class="grid two">
-        <div>
-          <h3>면허/자격증</h3>
-          <p>등록증, 인증서, 기술인력 보유 현황 썸네일/리스트로 표기</p>
-        </div>
-        <div>
-          <h3>고객상담</h3>
-          <form action="https://formsubmit.co/you@example.com" method="POST" class="contact-form">
-            <input type="hidden" name="_captcha" value="false">
-            <label>이름<input name="name" required></label>
-            <label>이메일<input name="email" type="email" required></label>
-            <label>문의내용<textarea name="message" rows="4" required></textarea></label>
-            <button type="submit" class="btn">보내기</button>
-          </form>
-          <p class="form-note">※ 서버 없이 동작하는 FormSubmit 예시입니다. 이메일 주소를 실제 주소로 바꿔주세요.</p>
-        </div>
-      </div>
     </div>
   </section>
-
-  <section id="intro4" class="snap-section alt" data-label="CAREERS">
+  <section id="careers" class="snap-section" data-label="CAREERS">
     <div class="container narrow">
-      <h2>인재채용</h2>
-      <div class="grid two">
-        <div>
-          <h3>인재상</h3>
-          <ul class="list">
-            <li>도전과 혁신</li>
-            <li>정직과 책임</li>
-            <li>협업과 소통</li>
-          </ul>
-        </div>
-        <div>
-          <h3>채용공고</h3>
-          <ul class="list">
-            <li><a href="#">[신입] 현장기술직 채용</a><time>2025-08-01</time></li>
-            <li><a href="#">[경력] 자동제어 엔지니어</a><time>2025-07-15</time></li>
-          </ul>
-          <p class="muted">* 공지사항과 동일한 템플릿으로 운영 가능</p>
-        </div>
-      </div>
+      <h2>인재채용(요약)</h2>
+      <ul class="list">
+        {% assign jobs = site.jobs | sort: 'date' | reverse | slice: 0, 5 %}
+        {% for it in jobs %}
+          <li><a href="{{ it.url | relative_url }}">{{ it.title }}</a><time>{{ it.date | date: "%Y-%m-%d" }}</time></li>
+        {% endfor %}
+      </ul>
+      <p><a class="btn" href="/careers/jobs/">채용공고 전체 보기</a></p>
     </div>
   </section>
-
-  <section id="contact" class="snap-section" data-label="LOCATION">
+  <section id="location" class="snap-section" data-label="LOCATION">
     <div class="container narrow">
       <h2>찾아오시는 길</h2>
       <div class="map-wrap">
-        <!-- 간단 지도 임베드(필요시 실제 주소의 지도 iFrame으로 교체) -->
-        <iframe src="https://maps.google.com/maps?q=Seoul&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://maps.google.com/maps?q=Seoul&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
       </div>
-      <address class="addr">
-        (우) 00000 서울특별시 ○○구 ○○로 00<br>
-        Tel. 02-000-0000 | Email. info@example.com
-      </address>
+      <address class="addr">(우)00000 서울특별시 ○○구 ○○로 00 | Tel. 02-000-0000</address>
     </div>
   </section>
 </main>
-
 <footer class="site-footer">
   <div class="container">
-    <p>© 2025 Company Name. All rights reserved.</p>
+    <p>© 2025 {{ site.title }}. Theme base: Minimal Mistakes (MIT). Landing layout by {{ site.title }}.</p>
   </div>
 </footer>
-
-<script src="assets/js/main.js"></script>
-</body>
-</html>
+<script src="/assets/js/main.js"></script>
+</body></html>
