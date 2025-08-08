@@ -1,11 +1,5 @@
-# GitHub Pages 회사 홈페이지 스타터
-
-- 단일 페이지(메인) 스크롤 스냅 + 좌측 섹션 라벨 동기화
-- 공지/홍보/사업/채용/찾아오시는 길 섹션 샘플
-- 서버 없이 동작하는 문의 폼(FormSubmit) 예시 포함
-
-## 사용법
-1. 이 폴더의 파일을 GitHub 저장소 루트에 업로드 (예: `사용자명.github.io`)
-2. `index.html` 텍스트와 이미지 교체
-3. 문의 폼 이메일 주소를 본인 이메일로 변경
-4. `assets/img/hero.jpg` 이미지를 회사 메인 이미지로 교체
+# Corporate Multipage GitHub Pages Starter
+- Landing page with scroll-snap + left label
+- Company / Business / PR / Careers subpages
+- Static JSON lists for notices & jobs
+- No build step; drop-in to GitHub Pages
